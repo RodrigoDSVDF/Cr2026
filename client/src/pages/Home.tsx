@@ -181,7 +181,7 @@ export default function Home() {
             {[
               { 
                 date: "2023 - 2026 (Previsão)", 
-                title: "Tecnológo em Ciência de Dados", 
+                title: "Tecnólogo em Ciência de Dados", 
                 institution: "Universidade Estácio", 
                 status: "Cursando" 
               },
