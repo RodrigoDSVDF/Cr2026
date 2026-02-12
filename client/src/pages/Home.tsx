@@ -121,7 +121,7 @@ export default function Home() {
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Brain className="text-emerald-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Performance Mental</h3>
-              <p className="text-sm text-slate-400">Uso de táticas de xadrez e performance cognitiva para concursos.</p>
+              <p className="text-sm text-slate-400">Uso de táticas de xadrez para rortalecimento da concentração e performance cognitiva para concursos.</p>
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Database className="text-blue-400 mb-4" size={32} />
@@ -139,8 +139,8 @@ export default function Home() {
           <div className="space-y-6">
             {[
               { date: "Jan 2022 - Presente", title: "Projetos pessoais de Análise de Dados", company: "Portfolio Digital Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
-              { date: "2016 - 2025", title: "Vigilante / Segurança Estratégica", company: "CFO (Conselho Federal de Odontologia)", desc: "Gestão de segurança e controle operacional institucional." },
-              { date: "2011 - 2013", title: "TApajós", company: "Construtura", desc: "Contas a Pagar, serviços bancários, gerenciamente e controle de estoque de materiais." },
+              { date: "2016 - 2025", title: "Agente de Segurança / Segurança Estratégica", company: "M5 (Gestão e segurança integrada)", desc: "Gestão de segurança e controle operacional institucional." },
+              { date: "2011 - 2013", title: "TApajós", company: "Construtora", desc: "Controle de pagamentos de funcíonarios, contas a pagar, serviços bancários, gerenciamente e controle de estoque de materiais." },
               { date: "2007 - 2010", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Disciplina e formação em operações de logística e segurança." }
             ].map((exp, idx) => (
               <div key={idx} className="p-6 bg-slate-900/40 border border-slate-800 relative">
