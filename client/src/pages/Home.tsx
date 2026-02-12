@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain, GraduationCap, CheckCircle2 } from "lucide-react";
+import { Mail, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain, GraduationCap, CheckCircle2, Phone, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 // Importação da sua foto na pasta assets
 import profilePic from "@/assets/ft01.png";
@@ -10,6 +10,10 @@ export default function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  // Substitua pelo seu número real seguindo o formato: 55619XXXXXXXX
+  const whatsappNumber = "5561983773112"; 
+  const displayPhone = "(61) 98377-3112";
 
   const titles = [
     "Analista de Dados",
@@ -95,7 +99,12 @@ export default function Home() {
               <div className="flex gap-4 justify-center md:justify-start flex-wrap">
                 <Button className="bg-cyan-600 hover:bg-cyan-500 text-white rounded-none px-8 gap-2" asChild>
                   <a href="mailto:rodrigoeng857@gmail.com">
-                    <Mail size={18} /> rodrigoeng857@gmail.com
+                    <Mail size={18} /> E-mail
+                  </a>
+                </Button>
+                <Button variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 rounded-none px-8 gap-2" asChild>
+                  <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle size={18} /> WhatsApp
                   </a>
                 </Button>
               </div>
@@ -116,17 +125,26 @@ export default function Home() {
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <ShieldCheck className="text-cyan-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Segurança Estratégica</h3>
-              <p className="text-sm text-slate-400">Disciplina operacional e gestão de riscos desenvolvido em diversos orgãos da Administração Pública entre 2016 e 2026. Banco do Brasil Tecnologia, Conselho Federal de Odontologia, Incra, COAF, atuamente em transição para o setor de tecnologia. </p>
+              <p className="text-sm text-slate-400 italic mb-2">Transição para Tecnologia</p>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Disciplina operacional e gestão de riscos desenvolvida em órgãos da Administração Pública (Banco do Brasil Tecnologia, CFO, INCRA, COAF) entre 2016 e 2026.
+              </p>
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Brain className="text-emerald-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Performance Mental</h3>
-              <p className="text-sm text-slate-400">Desenvolvimento de alta performance cognitiva e agilidade mental através de métodos estratégicos (Chess Tatics) e neurociência aplicada, focada em resolução de problemas complexos e retenção de informação.</p>
+              <p className="text-sm text-slate-400 italic mb-2">Cognição Aplicada</p>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Uso de táticas estratégicas de xadrez e neurociência aplicada para otimização da retenção de informações e resolução de problemas complexos.
+              </p>
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Database className="text-blue-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Data Intelligence</h3>
-              <p className="text-sm text-slate-400">Especializado em arquitetura de dados, automação Python e Dashboards estratégicos com Streamlit.</p>
+              <p className="text-sm text-slate-400 italic mb-2">Engenharia de Insights</p>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Especializado em arquitetura de dados, automação com Python e criação de Dashboards estratégicos com Streamlit.
+              </p>
             </div>
           </div>
         </section>
@@ -138,17 +156,17 @@ export default function Home() {
           </h2>
           <div className="space-y-6">
             {[
-              { date: "Jan 2022 - Presente", title: "Projetos pessoais de Análise de Dados", company: "Portfolio Digital Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
-              { date: "2016 - 2025", title: "Agente de Segurança / Segurança Estratégica", company: "M5 (Gestão e segurança integrada)", desc: "Gestão de segurança e controle operacional institucional." },
-              { date: "2011 - 2013", title: "TApajós", company: "Construtora", desc: "Controle de pagamentos de funcíonarios, contas a pagar, serviços bancários, gerenciamente e controle de estoque de materiais." },
-              { date: "2007 - 2010", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Disciplina e formação em operações de logística e segurança." }
+              { date: "Jan 2022 - Presente", title: "Projetos Pessoais de Análise de Dados", company: "Portfolio Digital Labs", desc: "Desenvolvimento de arquitetura de dados, pipelines ETL e dashboards interativos para análise de mercado." },
+              { date: "2016 - 2025", title: "Agente de Segurança / Segurança Estratégica", company: "M5 (Gestão e Segurança Integrada)", desc: "Gestão de segurança e controle operacional institucional em órgãos federais e autarquias." },
+              { date: "2011 - 2013", title: "Assistente Administrativo / Financeiro", company: "Tapajós Construtora", desc: "Controle de pagamentos, contas a pagar, serviços bancários e gerenciamento de estoque de materiais." },
+              { date: "2007 - 2010", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Formação baseada em disciplina, operações de logística e segurança institucional." }
             ].map((exp, idx) => (
               <div key={idx} className="p-6 bg-slate-900/40 border border-slate-800 relative">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-500" />
                 <span className="text-cyan-400 text-xs font-mono">{exp.date}</span>
                 <h3 className="text-xl font-bold text-white mt-1">{exp.title}</h3>
                 <p className="text-emerald-400 text-sm mb-3">{exp.company}</p>
-                <p className="text-slate-400 text-sm">{exp.desc}</p>
+                <p className="text-slate-400 text-sm leading-relaxed">{exp.desc}</p>
               </div>
             ))}
           </div>
@@ -169,7 +187,7 @@ export default function Home() {
               },
               { 
                 date: "2016 - 2020", 
-                title: "Gestão Financeira", 
+                title: "Tecnologia em Gestão Financeira", 
                 institution: "Unopar", 
                 status: "Concluído" 
               }
@@ -192,7 +210,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Cursos Complementares Section - NOVA SEÇÃO */}
+        {/* Cursos Complementares Section */}
         <section id="courses" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> CURSOS COMPLEMENTARES
@@ -200,12 +218,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-4">
             {[
               { name: "Formação em Ciência de Dados com Python e R", provider: "Udemy" },
-              { name: "Modelagem de Dados", provider: "Especialização" },
+              { name: "Modelagem de Dados Avançada", provider: "Especialização" },
               { name: "MySQL / Banco de Dados Relacional", provider: "Udemy" },
-              { name: "Curso Completo de Banco de Dados", provider: "Udemy" },
-              { name: "Análise e Estatística em R", provider: "Estatística Aplicada" },
-              { name: "Introdução ao Python e R", provider: "Tech Training" },
-              { name: "Excel Intermediário", provider: "Corporativo" }
+              { name: "Análise Exploratória e Estatística em R", provider: "Estatística Aplicada" },
+              { name: "Introdução à Programação (Python e R)", provider: "Tech Training" },
+              { name: "Excel Intermediário / Avançado", provider: "Corporativo" }
             ].map((course, idx) => (
               <div key={idx} className="flex items-center gap-4 p-4 bg-slate-900/30 border border-slate-800 hover:border-cyan-500/30 transition-colors">
                 <CheckCircle2 className="text-cyan-400 shrink-0" size={20} />
@@ -228,44 +245,30 @@ export default function Home() {
               { 
                 title: "Gestor de Táticas Cognitivas", 
                 tags: ["React", "Python"], 
-                desc: "Sistema para atletas mentais e concurseiros de alto rendimento.",
+                desc: "Sistema focado em otimização de rotina para atletas mentais e concurseiros de alto rendimento.",
                 link: "https://nexus-manual.com.br",
                 btnLabel: "nexus-manual.com.br"
               },
               { 
                 title: "Market Crypto Analysis", 
                 tags: ["Streamlit", "Finance"], 
-                desc: "Dashboard de análise de criptoativos em tempo real.",
+                desc: "Dashboard de análise de criptoativos em tempo real com indicadores técnicos.",
                 link: "https://marketcrypto.streamlit.app",
                 btnLabel: "marketcrypto.streamlit.app"
               },
               { 
                 title: "Análise PPDF 2022", 
                 tags: ["Vite", "Analytics"], 
-                desc: "Visualização de dados para aprovados do concurso Polícia Penal 2022.",
+                desc: "Visualização interativa de dados para consulta de aprovados no concurso Polícia Penal 2022.",
                 link: "https://aprovadosppdf2022.com",
                 btnLabel: "aprovadosppdf2022.com"
               },
               { 
                 title: "Mega-Sena Premium Analysis", 
                 tags: ["Streamlit", "Python"], 
-                desc: "Estatística preditiva e análise de tendências de dados.",
+                desc: "Modelo estatístico preditivo para análise de tendências e probabilidades de sorteios.",
                 link: "https://megasimulador.streamlit.app",
                 btnLabel: "megasimulador.streamlit.app"
-              },
-              { 
-                title: "Sistema Recomendador", 
-                tags: ["ML", "Scikit-Learn"], 
-                desc: "Algoritmos de sugestão baseados em comportamento de dados.",
-                link: "#",
-                btnLabel: "Ver Projeto"
-              },
-              { 
-                title: "Automação de Fluxos ETL", 
-                tags: ["Python", "Pandas"], 
-                desc: "Processamento de grandes volumes de dados de múltiplas fontes.",
-                link: "#",
-                btnLabel: "Ver Projeto"
               }
             ].map((p, i) => (
               <div key={i} className="p-8 bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 transition-all group flex flex-col justify-between">
@@ -298,21 +301,26 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> CONEXÕES PROFISSIONAIS
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <a href="mailto:rodrigoeng857@gmail.com" className="p-6 bg-slate-900 border border-slate-800 text-center hover:border-cyan-500/50 transition-all">
               <Mail className="mx-auto text-cyan-400 mb-3" size={24} />
               <h4 className="font-bold text-sm">E-mail</h4>
-              <p className="text-xs text-slate-500 mt-2 truncate">rodrigoeng857@gmail.com</p>
+              <p className="text-[10px] text-slate-500 mt-2 truncate">rodrigoeng857@gmail.com</p>
             </a>
-            <a href="https://www.linkedin.com/in/rodrigo-s-45724116a/" target="_blank" className="p-6 bg-slate-900 border border-slate-800 text-center hover:border-cyan-500/50 transition-all">
-              <Linkedin className="mx-auto text-cyan-400 mb-3" size={24} />
+            <a href={`https://wa.me/${whatsappNumber}`} target="_blank" className="p-6 bg-slate-900 border border-slate-800 text-center hover:border-emerald-500/50 transition-all">
+              <Phone className="mx-auto text-emerald-400 mb-3" size={24} />
+              <h4 className="font-bold text-sm">WhatsApp</h4>
+              <p className="text-[10px] text-slate-500 mt-2">{displayPhone}</p>
+            </a>
+            <a href="https://www.linkedin.com/in/rodrigo-s-45724116a/" target="_blank" className="p-6 bg-slate-900 border border-slate-800 text-center hover:border-blue-500/50 transition-all">
+              <Linkedin className="mx-auto text-blue-400 mb-3" size={24} />
               <h4 className="font-bold text-sm">LinkedIn</h4>
-              <p className="text-xs text-slate-500 mt-2">Rodrigo S.</p>
+              <p className="text-[10px] text-slate-500 mt-2 italic">Acessar Perfil</p>
             </a>
-            <a href="https://github.com/RodrigoDSVDF" target="_blank" className="p-6 bg-slate-900 border border-slate-800 text-center hover:border-cyan-500/50 transition-all">
-              <Github className="mx-auto text-cyan-400 mb-3" size={24} />
+            <a href="https://github.com/RodrigoDSVDF" target="_blank" className="p-6 bg-slate-900 border border-slate-800 text-center hover:border-white/20 transition-all">
+              <Github className="mx-auto text-white mb-3" size={24} />
               <h4 className="font-bold text-sm">GitHub</h4>
-              <p className="text-xs text-slate-500 mt-2">RodrigoDSVDF</p>
+              <p className="text-[10px] text-slate-500 mt-2 italic">Ver Repositórios</p>
             </a>
           </div>
         </section>
