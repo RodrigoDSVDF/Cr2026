@@ -121,7 +121,7 @@ export default function Home() {
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Brain className="text-emerald-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Performance Mental</h3>
-              <p className="text-sm text-slate-400">Uso de táticas de xadrez para rortalecimento da concentração e performance cognitiva para concursos.</p>
+              <p className="text-sm text-slate-400">Desenvolvimento de alta performance cognitiva e agilidade mental através de métodos estratégicos (Chess Tatics) e neurociência aplicada, focada em resolução de problemas complexos e retenção de informação.</p>
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Database className="text-blue-400 mb-4" size={32} />
