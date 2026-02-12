@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Download, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain, GraduationCap } from "lucide-react";
+import { Mail, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain, GraduationCap } from "lucide-react";
 import { useEffect, useState } from "react";
+// Importação da sua foto na pasta assets
+import profilePic from "@/assets/ft01.png";
 
 export default function Home() {
   const [viewCount, setViewCount] = useState(0);
@@ -70,9 +72,14 @@ export default function Home() {
       <section className="pt-40 pb-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-16">
+            {/* Box da Foto Atualizado */}
             <div className="w-64 h-64 flex-shrink-0">
-              <div className="w-full h-full rounded-2xl border-2 border-cyan-500/50 bg-slate-900 flex items-center justify-center text-8xl shadow-2xl shadow-cyan-500/10">
-                👤
+              <div className="w-full h-full rounded-2xl border-2 border-cyan-500/50 bg-slate-900 overflow-hidden shadow-2xl shadow-cyan-500/10">
+                <img 
+                  src={profilePic} 
+                  alt="Rodrigo Silva" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="flex-1 text-center md:text-left">
@@ -92,9 +99,7 @@ export default function Home() {
                     <Mail size={18} /> rodrigoeng857@gmail.com
                   </a>
                 </Button>
-                <Button variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800 rounded-none gap-2">
-                  <Download size={18} /> Baixar Currículo PDF
-                </Button>
+                {/* Botão Baixar Currículo Removido como solicitado */}
               </div>
             </div>
           </div>
@@ -263,7 +268,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Conexões Section */}
+        {/* Contato Section */}
         <section id="contact" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> CONEXÕES PROFISSIONAIS
