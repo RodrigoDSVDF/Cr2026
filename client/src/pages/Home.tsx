@@ -104,7 +104,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="container mx-auto max-w-5xl px-6 pb-20">
         
-        {/* Sobre Section */}
+        {/* Resumo Section */}
         <section id="about" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> RESUMO PROFISSIONAL
@@ -188,39 +188,82 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projetos Section */}
+        {/* Portfólio Section */}
         <section id="projects" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> PORTFÓLIO DE PROJETOS
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: "Gestor de Táticas Cognitivas", tags: ["React", "Python"], desc: "Sistema para atletas mentais e concurseiros de alto rendimento." },
-              { title: "Análise PPDF 2022", tags: ["Vite", "Analytics"], desc: "Visualização de dados para concursos públicos e transparência." },
-              { title: "Mega-Sena Premium Analysis", tags: ["Streamlit", "Python"], desc: "Estatística preditiva e análise de tendências de dados." },
-              { title: "Dashboard Comercial", tags: ["Power BI", "SQL"], desc: "Análise de performance em tempo real para tomada de decisão." },
-              { title: "Sistema Recomendador", tags: ["ML", "Scikit-Learn"], desc: "Algoritmos de sugestão baseados em comportamento de dados." },
-              { title: "Automação de Fluxos ETL", tags: ["Python", "Pandas"], desc: "Processamento de grandes volumes de dados de múltiplas fontes." }
+              { 
+                title: "Gestor de Táticas Cognitivas", 
+                tags: ["React", "Python"], 
+                desc: "Sistema para atletas mentais e concurseiros de alto rendimento.",
+                link: "https://nexus-manual.com.br",
+                btnLabel: "nexus-manual.com.br"
+              },
+              { 
+                title: "Market Crypto Analysis", 
+                tags: ["Streamlit", "Finance"], 
+                desc: "Dashboard de análise de criptoativos em tempo real.",
+                link: "https://marketcrypto.streamlit.app",
+                btnLabel: "marketcrypto.streamlit.app"
+              },
+              { 
+                title: "Análise PPDF 2022", 
+                tags: ["Vite", "Analytics"], 
+                desc: "Visualização de dados para o Concurso Polícia Penal 2022.",
+                link: "#",
+                btnLabel: "Concurso Polícia Penal 2022"
+              },
+              { 
+                title: "Mega-Sena Premium Analysis", 
+                tags: ["Streamlit", "Python"], 
+                desc: "Estatística preditiva e análise de tendências de dados.",
+                link: "https://megasimulador.streamlit.app",
+                btnLabel: "megasimulador.streamlit.app"
+              },
+              { 
+                title: "Sistema Recomendador", 
+                tags: ["ML", "Scikit-Learn"], 
+                desc: "Algoritmos de sugestão baseados em comportamento de dados.",
+                link: "#",
+                btnLabel: "Ver Projeto"
+              },
+              { 
+                title: "Automação de Fluxos ETL", 
+                tags: ["Python", "Pandas"], 
+                desc: "Processamento de grandes volumes de dados de múltiplas fontes.",
+                link: "#",
+                btnLabel: "Ver Projeto"
+              }
             ].map((p, i) => (
-              <div key={i} className="p-8 bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 transition-all group">
-                <div className="flex justify-between items-start mb-4">
-                  <h4 className="text-xl font-bold text-white group-hover:text-cyan-400">{p.title}</h4>
-                  <ExternalLink size={16} className="text-slate-600" />
+              <div key={i} className="p-8 bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 transition-all group flex flex-col justify-between">
+                <div>
+                  <div className="flex justify-between items-start mb-4">
+                    <h4 className="text-xl font-bold text-white group-hover:text-cyan-400">{p.title}</h4>
+                    <ExternalLink size={16} className="text-slate-600" />
+                  </div>
+                  <p className="text-slate-400 text-sm mb-6 leading-relaxed">{p.desc}</p>
+                  <div className="flex gap-2 mb-6">
+                    {p.tags.map(t => (
+                      <span key={t} className="text-[10px] uppercase font-bold px-2 py-1 bg-slate-800 text-cyan-300 border border-slate-700">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-slate-400 text-sm mb-6 leading-relaxed">{p.desc}</p>
-                <div className="flex gap-2">
-                  {p.tags.map(t => (
-                    <span key={t} className="text-[10px] uppercase font-bold px-2 py-1 bg-slate-800 text-cyan-300 border border-slate-700">
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                <Button variant="outline" className="w-full border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 rounded-none text-xs truncate" asChild>
+                  <a href={p.link} target="_blank" rel="noopener noreferrer">
+                    {p.btnLabel}
+                  </a>
+                </Button>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Contato Section */}
+        {/* Conexões Section */}
         <section id="contact" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> CONEXÕES PROFISSIONAIS
