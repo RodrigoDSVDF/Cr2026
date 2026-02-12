@@ -116,17 +116,17 @@ export default function Home() {
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <ShieldCheck className="text-cyan-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Segurança Estratégica</h3>
-              <p className="text-sm text-slate-400">Disciplina operacional e gestão de riscos desenvolvida no CFO entre 2016 e 2025.</p>
+              <p className="text-sm text-slate-400">Disciplina operacional e gestão de riscos desenvolvido em diversos orgãos da Administração Pública entre 2016 e 2026. Banco do Brasil Tecnologia, Conselho Federal de Odontologia, Incra, COAF, atuamente em transição para o setor de tecnologia. </p>
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Brain className="text-emerald-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Performance Mental</h3>
-              <p className="text-sm text-slate-400">Uso de táticas de xadrez e performance cognitiva para o concurso de Policial Legislativo.</p>
+              <p className="text-sm text-slate-400">Uso de táticas de xadrez e performance cognitiva para concursos.</p>
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Database className="text-blue-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Data Intelligence</h3>
-              <p className="text-sm text-slate-400">Especializado em arquitetura de dados, automação Python e Dashboards estratégicos.</p>
+              <p className="text-sm text-slate-400">Especializado em arquitetura de dados, automação Python e Dashboards estratégicos com Streamlit.</p>
             </div>
           </div>
         </section>
@@ -138,9 +138,10 @@ export default function Home() {
           </h2>
           <div className="space-y-6">
             {[
+              { date: "Jan 2022 - Presente", title: "Projetos pessoais de Análise de Dados", company: "Portfolio Digital Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
               { date: "2016 - 2025", title: "Vigilante / Segurança Estratégica", company: "CFO (Conselho Federal de Odontologia)", desc: "Gestão de segurança e controle operacional institucional." },
-              { date: "Jan 2022 - Presente", title: "Projetos de Análise de Dados", company: "Portfolio Digital Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
-              { date: "2007 - 2011", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Disciplina e formação em operações de logística e segurança." }
+              { date: "2011 - 2013", title: "TApajós", company: "Construtura", desc: "Contas a Pagar, serviços bancários, gerenciamente e controle de estoque de materiais." },
+              { date: "2007 - 2010", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Disciplina e formação em operações de logística e segurança." }
             ].map((exp, idx) => (
               <div key={idx} className="p-6 bg-slate-900/40 border border-slate-800 relative">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-500" />
@@ -241,7 +242,7 @@ export default function Home() {
               { 
                 title: "Análise PPDF 2022", 
                 tags: ["Vite", "Analytics"], 
-                desc: "Visualização de dados para o Concurso Polícia Penal 2022.",
+                desc: "Visualização de dados para aprovados do concurso Polícia Penal 2022.",
                 link: "https://aprovadosppdf2022.com",
                 btnLabel: "aprovadosppdf2022.com"
               },
