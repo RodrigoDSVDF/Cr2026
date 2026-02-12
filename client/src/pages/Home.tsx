@@ -49,12 +49,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-200 selection:bg-cyan-500/30">
+    <div className="min-h-screen bg-[#020617] text-slate-200 selection:bg-cyan-500/30 font-sans">
       {/* Header */}
-      <header className="fixed top-0 w-full z-50 bg-[#020617]/90 backdrop-blur-md border-b border-cyan-500/10">
+      <header className="fixed top-0 w-full z-50 bg-[#020617]/95 backdrop-blur-md border-b border-cyan-500/10">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-black tracking-tighter bg-gradient-to-r from-cyan-400 to-emerald-500 bg-clip-text text-transparent">
-            NEXUS.ORIGIN
+          <div className="text-2xl font-black tracking-tighter bg-gradient-to-r from-cyan-400 to-emerald-500 bg-clip-text text-transparent uppercase">
+            CURRÍCULO.DIGITAL
           </div>
           <nav className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
             <a href="#about" className="hover:text-cyan-400 transition-colors">Sobre</a>
@@ -84,7 +84,7 @@ export default function Home() {
               </div>
               <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-2xl">
                 Estrategista de Dados focado em transformar fluxos complexos em inteligência acionável. 
-                Desenvolvedor do ecossistema Nexus para alta performance mental.
+                Desenvolvedor focado em alta performance e arquitetura de dados aplicada.
               </p>
               <div className="flex gap-4 justify-center md:justify-start flex-wrap">
                 <Button className="bg-cyan-600 hover:bg-cyan-500 text-white rounded-none px-8 gap-2" asChild>
@@ -93,7 +93,7 @@ export default function Home() {
                   </a>
                 </Button>
                 <Button variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800 rounded-none gap-2">
-                  <Download size={18} /> Baixar CV
+                  <Download size={18} /> Baixar Currículo PDF
                 </Button>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function Home() {
         {/* Sobre Section */}
         <section id="about" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span className="w-12 h-[2px] bg-cyan-500" /> SOBRE MIM
+            <span className="w-12 h-[2px] bg-cyan-500" /> RESUMO PROFISSIONAL
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-slate-900/50 border border-slate-800">
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Brain className="text-emerald-400 mb-4" size={32} />
-              <h3 className="font-bold mb-2">Atleta Mental</h3>
+              <h3 className="font-bold mb-2">Performance Mental</h3>
               <p className="text-sm text-slate-400">Uso de táticas de xadrez e performance cognitiva para o concurso de Policial Legislativo.</p>
             </div>
             <div className="p-6 bg-slate-900/50 border border-slate-800">
@@ -131,12 +131,12 @@ export default function Home() {
         {/* Experiência Section */}
         <section id="experience" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span className="w-12 h-[2px] bg-cyan-500" /> EXPERIÊNCIA
+            <span className="w-12 h-[2px] bg-cyan-500" /> TRAJETÓRIA PROFISSIONAL
           </h2>
           <div className="space-y-6">
             {[
               { date: "2016 - 2025", title: "Vigilante / Segurança Estratégica", company: "CFO (Conselho Federal de Odontologia)", desc: "Gestão de segurança e controle operacional institucional." },
-              { date: "Jan 2022 - Presente", title: "Analista de Dados (Projetos)", company: "Nexus Origin Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
+              { date: "Jan 2022 - Presente", title: "Projetos de Análise de Dados", company: "Currículo Digital Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
               { date: "2007 - 2011", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Disciplina e formação em operações de logística e segurança." }
             ].map((exp, idx) => (
               <div key={idx} className="p-6 bg-slate-900/40 border border-slate-800 relative">
@@ -191,16 +191,16 @@ export default function Home() {
         {/* Projetos Section */}
         <section id="projects" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span className="w-12 h-[2px] bg-cyan-500" /> PROJETOS & LABS
+            <span className="w-12 h-[2px] bg-cyan-500" /> PORTFÓLIO DE PROJETOS
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: "Nexus Neuro-Scheduler", tags: ["React", "Python"], desc: "Gestor de táticas cognitivas para atletas mentais." },
-              { title: "Análise PPDF 2022", tags: ["Vite", "Analytics"], desc: "Visualização de dados para concursos públicos." },
-              { title: "Mega-Sena Premium", tags: ["Streamlit", "Python"], desc: "Estatística preditiva e análise de tendências." },
-              { title: "Dashboard Comercial", tags: ["Power BI", "SQL"], desc: "Análise de performance em tempo real." },
-              { title: "Sistema Recomendador", tags: ["ML", "Scikit-Learn"], desc: "Algoritmos de sugestão baseados em comportamento." },
-              { title: "Automação ETL", tags: ["Python", "Pandas"], desc: "Processamento de grandes volumes de dados." }
+              { title: "Gestor de Táticas Cognitivas", tags: ["React", "Python"], desc: "Sistema para atletas mentais e concurseiros de alto rendimento." },
+              { title: "Análise PPDF 2022", tags: ["Vite", "Analytics"], desc: "Visualização de dados para concursos públicos e transparência." },
+              { title: "Mega-Sena Premium Analysis", tags: ["Streamlit", "Python"], desc: "Estatística preditiva e análise de tendências de dados." },
+              { title: "Dashboard Comercial", tags: ["Power BI", "SQL"], desc: "Análise de performance em tempo real para tomada de decisão." },
+              { title: "Sistema Recomendador", tags: ["ML", "Scikit-Learn"], desc: "Algoritmos de sugestão baseados em comportamento de dados." },
+              { title: "Automação de Fluxos ETL", tags: ["Python", "Pandas"], desc: "Processamento de grandes volumes de dados de múltiplas fontes." }
             ].map((p, i) => (
               <div key={i} className="p-8 bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 transition-all group">
                 <div className="flex justify-between items-start mb-4">
@@ -223,7 +223,7 @@ export default function Home() {
         {/* Contato Section */}
         <section id="contact" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span className="w-12 h-[2px] bg-cyan-500" /> CONEXÕES
+            <span className="w-12 h-[2px] bg-cyan-500" /> CONEXÕES PROFISSIONAIS
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <a href="mailto:rodrigoeng857@gmail.com" className="p-6 bg-slate-900 border border-slate-800 text-center hover:border-cyan-500/50 transition-all">
@@ -245,14 +245,14 @@ export default function Home() {
         </section>
 
         <div className="text-center text-slate-600 text-[10px] tracking-widest uppercase">
-          Views do sistema: {viewCount} | Brasília, DF
+          Visualizações do Currículo: {viewCount} | Brasília, DF
         </div>
       </main>
 
       {/* Footer */}
       <footer className="py-12 border-t border-slate-900 text-center">
         <p className="text-slate-500 text-xs tracking-widest uppercase">
-          © {new Date().getFullYear()} Rodrigo Silva // NEXUS DATA ARCHITECT
+          © {new Date().getFullYear()} Rodrigo Silva // ESPECIALISTA EM DADOS
         </p>
       </footer>
     </div>
