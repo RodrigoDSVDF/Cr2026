@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Download, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain } from "lucide-react";
+import { Mail, Download, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain, GraduationCap } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
     "Data Storyteller",
   ];
 
-  // Efeito de Digitação (Mantido)
+  // Efeito de Digitação
   useEffect(() => {
     const currentTitle = titles[titleIndex];
     const typingSpeed = isDeleting ? 50 : 100;
@@ -59,6 +59,7 @@ export default function Home() {
           <nav className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
             <a href="#about" className="hover:text-cyan-400 transition-colors">Sobre</a>
             <a href="#experience" className="hover:text-cyan-400 transition-colors">Experiência</a>
+            <a href="#education" className="hover:text-cyan-400 transition-colors">Formação</a>
             <a href="#projects" className="hover:text-cyan-400 transition-colors">Projetos</a>
             <a href="#contact" className="hover:text-cyan-400 transition-colors">Contato</a>
           </nav>
@@ -122,7 +123,7 @@ export default function Home() {
             <div className="p-6 bg-slate-900/50 border border-slate-800">
               <Database className="text-blue-400 mb-4" size={32} />
               <h3 className="font-bold mb-2">Data Intelligence</h3>
-              <p className="text-sm text-slate-400">Graduando em Ciência de Dados, especializado em automação Python e Dashboards.</p>
+              <p className="text-sm text-slate-400">Especializado em arquitetura de dados, automação Python e Dashboards estratégicos.</p>
             </div>
           </div>
         </section>
@@ -149,7 +150,45 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projetos Section - JANELAS PARA EDIÇÃO */}
+        {/* Formação Acadêmica Section */}
+        <section id="education" className="mb-24">
+          <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
+            <span className="w-12 h-[2px] bg-cyan-500" /> FORMAÇÃO ACADÊMICA
+          </h2>
+          <div className="space-y-6">
+            {[
+              { 
+                date: "2023 - 2026 (Previsão)", 
+                title: "Bacharelado em Ciência de Dados", 
+                institution: "Universidade Estácio", 
+                status: "Cursando" 
+              },
+              { 
+                date: "2016 - 2020", 
+                title: "Gestão Financeira", 
+                institution: "Unopar", 
+                status: "Concluído" 
+              }
+            ].map((edu, idx) => (
+              <div key={idx} className="p-6 bg-slate-900/40 border border-slate-800 relative flex items-start gap-4">
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500" />
+                <div className="mt-1">
+                  <GraduationCap className="text-emerald-400" size={24} />
+                </div>
+                <div>
+                  <span className="text-emerald-400 text-xs font-mono">{edu.date}</span>
+                  <h3 className="text-xl font-bold text-white mt-1">{edu.title}</h3>
+                  <p className="text-slate-300 text-sm">{edu.institution}</p>
+                  <span className="inline-block mt-2 text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 bg-slate-800 border border-slate-700 text-slate-400">
+                    {edu.status}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Projetos Section */}
         <section id="projects" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> PROJETOS & LABS
@@ -161,7 +200,7 @@ export default function Home() {
               { title: "Mega-Sena Premium", tags: ["Streamlit", "Python"], desc: "Estatística preditiva e análise de tendências." },
               { title: "Dashboard Comercial", tags: ["Power BI", "SQL"], desc: "Análise de performance em tempo real." },
               { title: "Sistema Recomendador", tags: ["ML", "Scikit-Learn"], desc: "Algoritmos de sugestão baseados em comportamento." },
-              { title: "Automação ETL", tags: ["Python", "Pandas"], desc: "Processamento de grandes volumes de dados de múltiplas fontes." }
+              { title: "Automação ETL", tags: ["Python", "Pandas"], desc: "Processamento de grandes volumes de dados." }
             ].map((p, i) => (
               <div key={i} className="p-8 bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 transition-all group">
                 <div className="flex justify-between items-start mb-4">
