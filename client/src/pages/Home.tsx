@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain, GraduationCap } from "lucide-react";
+import { Mail, Github, Linkedin, ExternalLink, Database, ShieldCheck, Brain, GraduationCap, CheckCircle2 } from "lucide-react";
 import { useEffect, useState } from "react";
 // Importação da sua foto na pasta assets
 import profilePic from "@/assets/ft01.png";
@@ -72,7 +72,6 @@ export default function Home() {
       <section className="pt-40 pb-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-16">
-            {/* Box da Foto Atualizado */}
             <div className="w-64 h-64 flex-shrink-0">
               <div className="w-full h-full rounded-2xl border-2 border-cyan-500/50 bg-slate-900 overflow-hidden shadow-2xl shadow-cyan-500/10">
                 <img 
@@ -99,7 +98,6 @@ export default function Home() {
                     <Mail size={18} /> rodrigoeng857@gmail.com
                   </a>
                 </Button>
-                {/* Botão Baixar Currículo Removido como solicitado */}
               </div>
             </div>
           </div>
@@ -141,7 +139,7 @@ export default function Home() {
           <div className="space-y-6">
             {[
               { date: "2016 - 2025", title: "Vigilante / Segurança Estratégica", company: "CFO (Conselho Federal de Odontologia)", desc: "Gestão de segurança e controle operacional institucional." },
-              { date: "Jan 2022 - Presente", title: "Projetos de Análise de Dados", company: "Currículo Digital Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
+              { date: "Jan 2022 - Presente", title: "Projetos de Análise de Dados", company: "Portfolio Digital Labs", desc: "Arquitetura de dados, pipelines ETL e dashboards interativos." },
               { date: "2007 - 2011", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Disciplina e formação em operações de logística e segurança." }
             ].map((exp, idx) => (
               <div key={idx} className="p-6 bg-slate-900/40 border border-slate-800 relative">
@@ -193,6 +191,32 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Cursos Complementares Section - NOVA SEÇÃO */}
+        <section id="courses" className="mb-24">
+          <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
+            <span className="w-12 h-[2px] bg-cyan-500" /> CURSOS COMPLEMENTARES
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { name: "Formação em Ciência de Dados com Python e R", provider: "Udemy" },
+              { name: "Modelagem de Dados", provider: "Especialização" },
+              { name: "MySQL / Banco de Dados Relacional", provider: "Udemy" },
+              { name: "Curso Completo de Banco de Dados", provider: "Udemy" },
+              { name: "Análise e Estatística em R", provider: "Estatística Aplicada" },
+              { name: "Introdução ao Python e R", provider: "Tech Training" },
+              { name: "Excel Intermediário", provider: "Corporativo" }
+            ].map((course, idx) => (
+              <div key={idx} className="flex items-center gap-4 p-4 bg-slate-900/30 border border-slate-800 hover:border-cyan-500/30 transition-colors">
+                <CheckCircle2 className="text-cyan-400 shrink-0" size={20} />
+                <div>
+                  <h4 className="text-sm font-bold text-white">{course.name}</h4>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-widest">{course.provider}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Portfólio Section */}
         <section id="projects" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
@@ -217,7 +241,7 @@ export default function Home() {
               { 
                 title: "Análise PPDF 2022", 
                 tags: ["Vite", "Analytics"], 
-                desc: "Plataforma de visualização e consulta de aprovados da Polícia Penal.",
+                desc: "Visualização de dados para o Concurso Polícia Penal 2022.",
                 link: "https://aprovadosppdf2022.com",
                 btnLabel: "aprovadosppdf2022.com"
               },
@@ -268,7 +292,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato Section */}
+        {/* Conexões Section */}
         <section id="contact" className="mb-24">
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-4">
             <span className="w-12 h-[2px] bg-cyan-500" /> CONEXÕES PROFISSIONAIS
