@@ -19,8 +19,6 @@ jobs:
 
       - name: Install pnpm 📦
         uses: pnpm/action-setup@v4
-        with:
-       
 
       - name: Setup Node 🏗️
         uses: actions/setup-node@v4
@@ -37,6 +35,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # O Vite gera a dist na raiz conforme seu vite.config.ts
+          folder: dist
           branch: gh-pages
           clean: true
