@@ -157,7 +157,7 @@ export default function Home() {
           <div className="space-y-6">
             {[
               { date: "Jan 2022 - Presente", title: "Projetos Pessoais de Análise de Dados", company: "Portfolio Digital Labs", desc: "Desenvolvimento de arquitetura de dados, pipelines ETL e dashboards interativos para análise de mercado." },
-              { date: "2016 - 2025", title: "Agente de Segurança / Segurança Estratégica", company: "M5 (Gestão e Segurança Integrada)", desc: "Gestão de segurança e controle operacional institucional em órgãos federais e autarquias." },
+              { date: "2016 - 2025", title: "Agente de Segurança / Segurança Estratégica", company: "M5 (Gestão de Segurança Integrada)", desc: "Gestão de segurança e controle operacional institucional em órgãos federais e autarquias." },
               { date: "2011 - 2013", title: "Assistente Administrativo / Financeiro", company: "Tapajós Construtora", desc: "Controle de pagamentos, contas a pagar, serviços bancários e gerenciamento de estoque de materiais." },
               { date: "2007 - 2010", title: "Serviço Militar", company: "Exército Brasileiro", desc: "Formação baseada em disciplina, operações de logística e segurança institucional." }
             ].map((exp, idx) => (
