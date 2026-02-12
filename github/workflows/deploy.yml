@@ -3,12 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # O site atualizará sempre que você der push na main
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -20,21 +18,20 @@ jobs:
       - name: Install pnpm 📦
         uses: pnpm/action-setup@v4
         with:
-          version: 10
+          version: 10 # Alinhado com a versão que você usa
 
       - name: Setup Node 🏗️
         uses: actions/setup-node@v4
         with:
           node-cache: 'pnpm'
 
-      - name: Install dependencies 🔧
-        run: pnpm install
-
-      - name: Build 🚀
-        run: pnpm run build
+      - name: Install and Build 🚀
+        run: |
+          pnpm install
+          pnpm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # O Vite gera a pasta dist na raiz, certo?
+          folder: dist # Pasta que o seu Vite gera na raiz
           branch: gh-pages
