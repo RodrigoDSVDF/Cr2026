@@ -295,9 +295,9 @@ export default function Home() {
               {
                 category: "Programação",
                 skills: [
-                  { name: "Python", level: 95 },
-                  { name: "SQL", level: 90 },
-                  { name: "Excel", level: 85 },
+                  { name: "Python", level: 90 },
+                  { name: "SQL", level: 80 },
+                  { name: "Excel", level: 75 },
                 ],
               },
               {
@@ -366,19 +366,19 @@ export default function Home() {
                 icon: Mail,
                 title: "Email",
                 value: "rodrigo@example.com",
-                link: "mailto:rodrigo@example.com",
+                link: "rodrigoeng857@gmail.com",
               },
               {
                 icon: Linkedin,
                 title: "LinkedIn",
-                value: "linkedin.com/in/rodrigosilva",
-                link: "https://linkedin.com",
+                value: "https://www.linkedin.com/in/rodrigo-s-45724116a/",
+                link: "https://www.linkedin.com/in/rodrigo-s-45724116a/",
               },
               {
                 icon: Github,
                 title: "GitHub",
                 value: "github.com/rodrigosilva",
-                link: "https://github.com",
+                link: "https://github.com/RodrigoDSVDF",
               },
             ].map((contact, idx) => {
               const Icon = contact.icon;
