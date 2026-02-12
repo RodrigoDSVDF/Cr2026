@@ -303,9 +303,9 @@ export default function Home() {
               {
                 category: "Ferramentas BI",
                 skills: [
-                  { name: "Power BI", level: 90 },
+                  { name: "Power BI", level: 70 },
                   { name: "Streamlit", level: 85 },
-                  { name: "Tableau", level: 80 },
+                  { name: "Tableau", level: 60 },
                 ],
               },
               {
@@ -365,7 +365,7 @@ export default function Home() {
               {
                 icon: Mail,
                 title: "Email",
-                value: "rodrigo@example.com",
+                value: "rodrigoeng857@gmail.com",
                 link: "rodrigoeng857@gmail.com",
               },
               {
@@ -377,7 +377,7 @@ export default function Home() {
               {
                 icon: Github,
                 title: "GitHub",
-                value: "github.com/rodrigosilva",
+                value: "https://github.com/RodrigoDSVDF",
                 link: "https://github.com/RodrigoDSVDF",
               },
             ].map((contact, idx) => {
