@@ -212,9 +212,9 @@ export default function Home() {
               { 
                 title: "Análise PPDF 2022", 
                 tags: ["Vite", "Analytics"], 
-                desc: "Visualização de dados para o Concurso Polícia Penal 2022.",
-                link: "#",
-                btnLabel: "Concurso Polícia Penal 2022"
+                desc: "Plataforma de visualização e consulta de aprovados da Polícia Penal.",
+                link: "https://aprovadosppdf2022.com",
+                btnLabel: "aprovadosppdf2022.com"
               },
               { 
                 title: "Mega-Sena Premium Analysis", 
