@@ -229,7 +229,7 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: "Gestor de Táticas Cognitivas", tags: ["React", "Python"], desc: "Sistema focado em otimização de rotina para atletas mentais.", link: "https://nexus-manual.com.br", btnLabel: "nexus-manual.com.br" },
+              { title: "Gestor de Táticas de Performance", tags: ["React", "Python"], desc: "Sistema focado em otimização de rotina e performance para profissionais e estudantes de tecnologia com uso de inteligência artifical .", link: "https://nexus-manual.com.br", btnLabel: "nexus-manual.com.br" },
               { title: "Market Crypto Analysis", tags: ["Streamlit", "Finance"], desc: "Dashboard de análise de criptoativos em tempo real.", link: "https://marketcrypto.streamlit.app", btnLabel: "marketcrypto.streamlit.app" },
               { title: "Análise PPDF 2022", tags: ["Vite", "Analytics"], desc: "Visualização de dados para consulta de aprovados no concurso Polícia Penal 2022.", link: "https://aprovadosppdf2022.com", btnLabel: "aprovadosppdf2022.com" },
               { title: "Mega-Sena Premium Analysis", tags: ["Streamlit", "Python"], desc: "Modelo estatístico preditivo para análise de tendências de sorteios.", link: "https://megasimulador.streamlit.app", btnLabel: "megasimulador.streamlit.app" }
