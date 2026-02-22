@@ -12,8 +12,8 @@ export default function Home() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   // Substitua pelo seu número real seguindo o formato: 55619XXXXXXXX
-  const whatsappNumber = "5561999999999"; 
-  const displayPhone = "(61) 99999-9999";
+  const whatsappNumber = "5561983773112"; 
+  const displayPhone = "(61) 98377-3112";
 
   const titles = [
     "Analista de Dados",
